@@ -15,7 +15,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hello! My name is Ignas and let\'s explore some US bikeshare data with me!')
     # Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         city = input("Enter the city (chicago, new york city or washington): ")
@@ -114,7 +114,7 @@ def station_stats(df):
 
     # Display most frequent combination of start station and end station trip
     df['mfcossaest'] = df['Start Station'] + " " + df['End Station']
-    print("The most frequent combination of start station and end station trip is ", df['mfcossaest'].mode()[0])
+    print("The most common route combination is ", df['mfcossaest'].mode()[0])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
